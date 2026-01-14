@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Meet Repair Assistant",
+  "version": "1.1",
+  "description": "オンライン会議の修復開始支援プロトタイプ",
+  "permissions": [
+    "scripting",
+    "activeTab"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://meet.google.com/*"],
+      "js": ["content.js"],
+      "css": ["style.css"]
+    }
+  ]
+}
