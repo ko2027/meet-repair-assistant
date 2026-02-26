@@ -1,7 +1,7 @@
 // === background.js (裏方) ===
 
 // ★ここにAPIキーを入れてください
-const API_KEY = "ここにAPIキー"
+const API_KEY = "ここにAIのキーを入れる（個人）"
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
   if (request.type === "CALL_AI") {
     // request.intent (意図) を受け取って処理を分岐
