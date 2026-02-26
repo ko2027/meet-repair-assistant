@@ -1,18 +1,24 @@
 {
   "manifest_version": 3,
-  "name": "Meet Repair Assistant",
-  "version": "1.1",
-  "description": "オンライン会議の修復開始支援プロトタイプ",
-  "permissions": [
-    "scripting",
-    "activeTab"
+  "name": "TEST: Auto Repair Assistant",
+  "version": "1.0",
+  "description": "自動提案（信号機）モードのテスト版",
+  "permissions": ["scripting", "activeTab"],
+  "host_permissions": [
+    "https://meet.google.com/*",
+    "https://teams.live.com/*",
+    "https://teams.microsoft.com/*"
   ],
   "background": {
     "service_worker": "background.js"
   },
   "content_scripts": [
     {
-      "matches": ["https://meet.google.com/*"],
+      "matches": [
+        "https://meet.google.com/*",
+        "https://teams.live.com/*",
+        "https://teams.microsoft.com/*"
+      ],
       "js": ["content.js"],
       "css": ["style.css"]
     }
